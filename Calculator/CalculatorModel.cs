@@ -15,9 +15,25 @@ namespace Calculator
 
         public object Calculate(int operand1, int operand2, char operation)
         {
-            return null;
-        }
-
-        
+            try { 
+                switch (operation)
+                {
+                    case '+':
+                        return operand1 + operand2;
+                    case '-':
+                        return operand1 - operand2;
+                    case '*':
+                        return operand1 * operand2;
+                    case '/':
+                        return operand1 / operand2;
+                    default :
+                        return null;
+                }
+            }
+            catch
+            {
+                return null;
+            }
+        }                
     }
 }
